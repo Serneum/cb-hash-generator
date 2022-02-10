@@ -14,7 +14,7 @@ class Parser
     options = {}
 
     opts = OptionParser.new do |parser|
-      parser.on('-h HEADER', '--header HEADER', "The complete header, including the timestampe and sha256 value.") do |header|
+      parser.on('-h HEADER', '--header HEADER', "The complete header, including the timestamp and sha256 value.") do |header|
         header_format = /t=(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z),sha256=(.*)/
         matches = header.match(header_format)
         options[:timestamp] = matches[1]
